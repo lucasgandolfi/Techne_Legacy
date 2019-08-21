@@ -1,0 +1,32 @@
+[
+      {
+        "image": "https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/unicesumar.png",
+        "message": "Unidade - Paulista",
+        "quick_reply": [
+          {
+            "url": "https://goo.gl/maps/s7WPqXREjfufbAFa6",
+            "text": "🗺️ Acessar mapa"
+          },
+          {
+            "data": "Unidade Paulista",
+            "text": "Escolher"
+          }
+        ]
+      },
+
+      
+      {
+        "image": "https://images.educamaisbrasil.com.br/content/superior/instituicao/logo/g/unicesumar.png",
+        "message": "Unidade - Aricanduva",
+        "quick_reply": [
+          {
+            "url": "https://goo.gl/maps/s7WPqXREjfufbAFa6",
+            "text": "🗺️ Acessar mapa"
+          },
+          {
+            "data": "Unidade Aricanduva",
+            "text": "Escolher"
+          }
+        ]
+      }
+    ]

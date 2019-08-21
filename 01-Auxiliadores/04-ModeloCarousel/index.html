@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Fazedor de Carousel</title>
+
+    <style>
+        body{
+            font-size: 1.2em;
+            background-color: #f0f0f0;;
+        }
+        .container{
+            background-color: white;
+            max-width: 80%;
+            padding-top: 2px;
+        }
+
+        h1{
+            margin-top: 19px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .form-control{
+            margin-bottom: 12px;
+        }
+        #gera{
+            margin-top: -80px;
+        }
+        #gerando{
+            display:block;
+        }
+        textarea{
+            width: 300px;
+            height: 200px;
+            
+        }
+        input{
+            padding-left: 40px;
+        }
+        
+    img{
+            width: 100%;
+            height: 300px;
+            border-radius: 14px;
+            
+        }
+
+        .teste{
+            display: inline-block;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h1>INSERIR IMG</h1>
+
+        <form>
+            <div class="form-group">
+                <input type="text" id="img_URL"  class="form-control" style="width:400px;" placeholder="url img">
+                <input type="text" id="img_Message" class="form-control" style="width:400px;" placeholder="message">
+            </div>
+            <div class="form-group">
+                <h1>INSERIR URL</h1>
+                <input type="text" id="url_Url" style="width:400px;" class="form-control" placeholder="url">
+                <input type="text" id="text_Url" style="width:400px;" class="form-control" placeholder="text">
+            </div>
+                <div class="form-group">
+                <h1>INSERIR QUICK REPLY</h1>
+                <input type="text" id="data_QuickReply" style="width:400px;" class="form-control" placeholder="data">
+                <input type="text"id="text_QuickReply" class="form-control" style="width:400px;" placeholder="text">
+            </div>
+            
+
+            <br>
+            <br>
+
+            <button  type="submit" id="gera" class="btn btn-danger" style="width:150px;">Gera código</button>
+            <button  type="submit" id="gera" class="btn btn-dark" style="width:150px;" onclick="zerar()" >Zerar</button>
+        </form>
+
+
+    <br>
+    <h1>PREVIEW</h1>
+    <div >
+    </div>
+    <div class="row">
+        <!---- AQUI SERÁ ADICIONADO O CÓDIGO
+        <div class="col-sm-2">
+            <h1>TESTE</h1>
+            <img src="img/img.jpg">
+            <input type="text"id="text_QuickReply" class="form-control" placeholder="text">
+        </div>
+        <div class="col-sm-2">
+                <h1>TESTE</h1>
+                <img src="img/img.jpg">
+                <input type="text"id="text_QuickReply" class="form-control" placeholder="text">
+            </div>
+            <div class="col-sm-2">
+                    <h1>TESTE</h1>
+                    <img src="img/img.jpg">
+                    <input type="text"id="text_QuickReply" class="form-control"  placeholder="text">
+            </div>
+            <div class="col-sm-2">
+                    <h1>TESTE</h1>
+                    <img src="img/img.jpg">
+                    <input type="text"id="text_QuickReply" class="form-control"  placeholder="text">
+            </div>
+            <div class="col-sm-2">
+                    <h1>TESTE</h1>
+                    <img src="img/img.jpg">
+                    <input type="text"id="text_QuickReply" class="form-control"  placeholder="text">
+            </div>
+            <div class="col-sm-2">
+                    <h1>TESTE</h1>
+                    <img src="img/img.jpg">
+                    <input type="text"id="text_QuickReply" class="form-control"  placeholder="text">
+            </div>--->
+        </div> 
+    
+
+
+
+    <div>
+    </div>
+    <h1>CÓDIGO</h1>
+    <textarea id="teste" readonly>    
+    </textarea>
+
+    <button  type="submit" id="copiar" class="btn btn-success" style="margin-bottom:40px;display: none;" >Copiar</button>
+    </div>
+
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/verificacao.js"></script>
+
+
+
+<script>
+
+    function contar(init){
+        var count =init || 0;
+        count ++;
+
+        
+
+        return count;
+    }
+    
+    $("#gera").click(function(carousel){
+        
+        //-------------------------------------------
+        //              Não submetendo com o click
+        //-------------------------------------------
+        event.preventDefault();
+
+        verificar();
+
+        if (verificar() == true){
+                //-------------------------------------------
+                //              Setando o ID no Session Storage
+                //-------------------------------------------
+                var clickdata = sessionStorage.getItem('click');
+                var quantoClica = contar(clickdata);
+                sessionStorage.setItem("click",quantoClica);
+                let id = sessionStorage.getItem('click');
+                let carousela = new Carousel();
+
+                //-------------------------------------------
+                //              setando o objeto do carousel
+                //-------------------------------------------
+                carousela.id = id;
+                
+                carousela.cria(carousela);
+
+
+                if(id!=1){
+                    carousela.adicionaCodigo(carousela);
+                }else{
+                    carousela.mostrar(carousela);
+                }
+
+                
+
+                //-------------------------------------------
+                //              Cria no area text o código
+                //-------------------------------------------
+                
+            
+                $("#copiar").css("display","");
+        
+        }else{
+            verificadorMaster();
+        }
+
+    });
+
+    $("#copiar").click(function(){
+
+        let carousela = new Carousel();
+        carousela.codigoFinaliza();
+
+        $("#teste").select();
+
+        document.execCommand('copy');
+
+        sessionStorage.clear();
+        alert("O código foi copiado!");
+
+        $("#copiar").css("display","none");
+    })
+
+    function zerar(){
+        
+        event.preventDefault();
+
+        $( ".col-sm-2" ).remove();
+        sessionStorage.clear();
+    }
+</script>
+</html>
