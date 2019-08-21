@@ -14,3 +14,9 @@
 
 ### -3 Puppeteer
   - [Referências Puppeteer(NodeJs)](03-Puppeter.js)
+
+### -4-AjudaGit
+  - [Git Hub ](04-AjudaGit)
+
+### -5-Dash
+  - [Dash-Bot](05-Dash)
