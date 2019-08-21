@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>JSON</title>
+
+    <style>
+        body{
+            font-size: 1.2em;
+            background-color: #f0f0f0;;
+        }
+        .container{
+            background-color: white;
+            max-width: 80%;
+            padding-top: 2px;
+            padding-left: 45px;
+        }
+
+        h1{
+            margin-top: 19px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        .form-control{
+            margin-bottom: 12px;
+        }
+        #gera{
+            margin-top: -80px;
+        }
+        
+        textarea{
+            width: 300px;
+            height: 500px;
+            
+        }
+        input{
+            padding-left: 40px;
+        }
+        
+    img{
+        padding-right: 23px;
+        width: 100%;
+        height: 293px;
+        border-radius: 76px;
+        margin-top: 129px;
+        margin-right: 43px;
+    }
+            
+        }
+
+        .teste{
+            display: inline-block;
+
+        }
+
+        
+
+    
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        
+            <div class="row">
+                    <div class="col-4">
+        <h1>JSON </h1>
+        <form>
+        <textarea id="teste" >    
+        </textarea>
+        
+        <button  type="submit" id="gerando" class="btn btn-success" style="margin-bottom:40px;" >Gerar</button>
+      
+    </div>
+    <div class="col-4">
+            <span id="imagem"></span>
+        </form>
+    </div>
+        <div class="col-4 center">
+        <h1>CÓDIGO PARA WATSON</h1>
+        <textarea id="testeArea" >    
+        </textarea>
+    
+        <button  type="submit" id="copiar" class="btn btn-success" style="margin-bottom:40px;" >Copiar</button>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script src="js/jquery-3.4.1.js"></script>
+
+</script>
+
+
+
+<script>
+
+    $("#gerando").click(function(){
+        event.preventDefault();
+
+        var testando = $("#teste").val();
+
+        var inputdoUsuario = ` { "employees" : [ ${testando} ]} `
+        var obj = JSON.parse(inputdoUsuario);
+        var countSize = obj.employees.length;
+        
+
+        var a = '';
+
+        //REPLICAR 
+        for(i=0; i<countSize; i++){
+            var a = a + `CursoEad,${obj.employees[i].IdCurso}, ${obj.employees[i].Nome}\n`;
+        
+            var contagemJSON = $("#testeArea").val(a);
+    };
+    });
+
+    $("#copiar").click(function(){
+
+    $("#teste").select();
+
+    document.execCommand('copy');
+
+    sessionStorage.clear();
+    
+    alert("O código foi copiado!");
+    $("#imagem").append("<img src='img/bouro.jpg' sty /><br/>");
+
+    
+    });
+    
+</script>
+</html>
