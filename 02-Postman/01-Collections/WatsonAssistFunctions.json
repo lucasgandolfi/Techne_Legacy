@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "53694e0f-62f0-4012-bbd3-7a6a583c166f",
+		"name": "WATSON ASSIST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Pegando todos os WorkSpaces",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9Uw-nNY4M_zB_XRqJA3JP3Dq4T6ANOU--3buOMm4HMNT",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apikey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces?version=2019-02-28&sort=name&include_count=true&include_audit=true",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"watsonplatform",
+						"net"
+					],
+					"path": [
+						"assistant",
+						"api",
+						"v1",
+						"workspaces"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2019-02-28"
+						},
+						{
+							"key": "sort",
+							"value": "name"
+						},
+						{
+							"key": "include_count",
+							"value": "true"
+						},
+						{
+							"key": "include_audit",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Token Para IAM WATSON",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Bearer",
+						"value": "yMpmBnkxTRKBUwFCaSYlgYEg5lAuCNhTInBLn-5sw56t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://iam.bluemix.net/identity/token?grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=sPJVX48OkR9WhTD96wn9np8Z2euipLOuxak1Pw8zd8Io",
+					"protocol": "https",
+					"host": [
+						"iam",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"identity",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "urn:ibm:params:oauth:grant-type:apikey"
+						},
+						{
+							"key": "apikey",
+							"value": "sPJVX48OkR9WhTD96wn9np8Z2euipLOuxak1Pw8zd8Io"
+						},
+						{
+							"key": "refresh_token",
+							"value": "ReVPqqXukd5kJZDHTONtW5rfebnxi8X3OHP5oVqSUmL4xX4Y2schJhwEfXnCaLJg14Cf-vUh_4difmCYh5GK4L14aw1Odaz9ZlSaRxZbacDZ5NnCJxNZFbql3n_ssY51QnoCsp1ZHX_Fe6c6I7FvTfv_QtIu86ZG-YPVkeAV7QboZikSEiBITcOZ3i45dPGFx4GTlKlbtMA1-Av6Czs317DtT0icZptcFoFCRLS4mIawzywRxtB90YBN39xeMIkQh4r8mZRh4ow6IDoZnJSogCvKKOnN_TQGKkjEe38pEsAAuro9jKgknEsvZzIpblwKVIOAvtzPCkbaXFnYTnmN_bY_tAETezt0u6XpSE-WKjFgtBkbuCN9Oz6gyjizLLkr4-ajdahOslP6dMbgJXQB2nGUVEcPPmwg1Iq_6hvKMiLEeCRn0ZbLQZ2nDbL9MkgSQVEJvd2OQUjYNtFLMd22AcqNEFftID9_TSw57rT1Xu-CIgtuL2Qs7XMFTx4RbHzBNZjuCmuZ_qQ1czvU1ZpGBO5t1EjZk62tJA8EzkUuo9rCYIa5LPS-YqJyKiQ0uSCCn2rMf-8CAOTOmRPueyEyLUL7CC8K3yRfj4vBD0uIZuxgxfa5vhIisHgIUwbcofVu-0qWlRNCZUgvOB6M-eZUhIkmxsJJgmfaiiDUtKeXeUvi6zB9COhvpRs5JaF2AhhG8pPRNvri1LACsj1mdpFe8zJw-R32IsHmFK-C951NjVDsG5E1ZWzKW4wQQymjmj6RYEpQgHpBBNQwHO7aohxEYXeHQoq0Vyhu0cObkCHhrnBrgjZlm7PxAfOweRZbNpb2ElD9pmC9sBILRCAGPDrjIezKX2aYCZRiG47_eZQfm_x8z23UUGGIIrX9-dnxx8f_Hg0Np9kRaBCMB3LT8-4Eqq5q9_RB_J2HwU7y2eyOc1XRo8WHfCzWJVpZJ2LGqb4WxaH_vlBmkP32lsZDkmI7GNAvlWd4X9--ogmE8F7IewJC8sqRiopkMtmkfRnEMkg-xP8",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vendo as APIS accounts da minha conta",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnVzLXNvdXRoLmNmLmNsb3VkLmlibS5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImtleS0xIiwidHlwIjoiSldUIn0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iam.bluemix.net/v1/apikeys?account_id=8fadeee9d5974cee8f9e682f7fb88dcc",
+					"protocol": "https",
+					"host": [
+						"iam",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"v1",
+						"apikeys"
+					],
+					"query": [
+						{
+							"key": "iam_id",
+							"value": "iam-ServiceId-78d6065a-b7f9-4a56-880a-16930d282a3a",
+							"disabled": true
+						},
+						{
+							"key": "account_id",
+							"value": "8fadeee9d5974cee8f9e682f7fb88dcc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Intents Peguei",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9Uw-nNY4M_zB_XRqJA3JP3Dq4T6ANOU--3buOMm4HMNT",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apikey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces/e5803821-8ed7-41e4-8584-77749a948bda/intents?version=2019-02-28",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"watsonplatform",
+						"net"
+					],
+					"path": [
+						"assistant",
+						"api",
+						"v1",
+						"workspaces",
+						"e5803821-8ed7-41e4-8584-77749a948bda",
+						"intents"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2019-02-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pegando Nós e conversas",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "9Uw-nNY4M_zB_XRqJA3JP3Dq4T6ANOU--3buOMm4HMNT",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apikey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces/10d65df3-02f4-410b-97ee-86a3862ca535/dialog_nodes?version=2019-02-28",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"watsonplatform",
+						"net"
+					],
+					"path": [
+						"assistant",
+						"api",
+						"v1",
+						"workspaces",
+						"10d65df3-02f4-410b-97ee-86a3862ca535",
+						"dialog_nodes"
+					],
+					"query": [
+						{
+							"key": "version",
+							"value": "2019-02-28"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Controle de instancias",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIyMDE5MDIwNCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLTc4ZDYwNjVhLWI3ZjktNGE1Ni04ODBhLTE2OTMwZDI4MmEzYSIsImlkIjoiaWFtLVNlcnZpY2VJZC03OGQ2MDY1YS1iN2Y5LTRhNTYtODgwYS0xNjkzMGQyODJhM2EiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC03OGQ2MDY1YS1iN2Y5LTRhNTYtODgwYS0xNjkzMGQyODJhM2EiLCJzdWIiOiJTZXJ2aWNlSWQtNzhkNjA2NWEtYjdmOS00YTU2LTg4MGEtMTY5MzBkMjgyYTNhIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJ1bmlxdWVfaW5zdGFuY2VfY3JucyI6WyJjcm46djE6Ymx1ZW1peDpwdWJsaWM6Y29udmVyc2F0aW9uOnVzLXNvdXRoOmEvZGY1YzhmMTI1ZTIzZDNmNzE3M2I0OTk0ZWYwYTFlN2I6NTk0NDFjMDUtNTA2YS00OTY5LTlmZWEtMDVlZjY1MjEyMWEyOjoiXSwiYWNjb3VudCI6eyJ2YWxpZCI6dHJ1ZSwiYnNzIjoiZGY1YzhmMTI1ZTIzZDNmNzE3M2I0OTk0ZWYwYTFlN2IifSwiaWF0IjoxNTYyMTY1Nzk3LCJleHAiOjE1NjIxNjkzOTcsImlzcyI6Imh0dHBzOi8vaWFtLmJsdWVtaXgubmV0L2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InVybjppYm06cGFyYW1zOm9hdXRoOmdyYW50LXR5cGU6YXBpa2V5Iiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiZGVmYXVsdCIsImFjciI6MSwiYW1yIjpbInB3ZCJdfQ.BrfopLG9fz5XcoElHW7a2Zw-X1Ix-tTvCn1sZoED6GCJdDACy9ysLuzfPDq4pD5T8vdbx7tZDUUhu96E5iquWMZY_wnerRfYhUdwK5Gyaku6qQ-37LeJGrE1htjPhmTh218PlZM7Y8oGh9lwIeQu8bABE0ZvsV4ypdnF_JleTmb7C6iYS3v175LY8lPYyAFRstM_cFoGmCEel_gEHlWxjeeFfUK4Y5aZcaiDdrQA2P-7xlqlb_Bb-k9CR2Yd2EDTRyh7QcwDXjs8N0H0jYDKTpM5FCRMZNe1RgQRCUmns9Oh7dmXDjRDajVyV-z7EvlE_fOI586KQqjQFc22aFu6XQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://resource-controller.cloud.ibm.com/v2/resource_instances",
+					"protocol": "https",
+					"host": [
+						"resource-controller",
+						"cloud",
+						"ibm",
+						"com"
+					],
+					"path": [
+						"v2",
+						"resource_instances"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PEGANDO CALLS",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJraWQiOiIyMDE5MDIwNCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJJQk1pZC01NTAwMDJTMUdEIiwiaWQiOiJJQk1pZC01NTAwMDJTMUdEIiwicmVhbG1pZCI6IklCTWlkIiwiaWRlbnRpZmllciI6IjU1MDAwMlMxR0QiLCJnaXZlbl9uYW1lIjoiV2lsbGlhbSIsImZhbWlseV9uYW1lIjoiWWl6aW1hIiwibmFtZSI6IldpbGxpYW0gWWl6aW1hIiwiZW1haWwiOiJ3aWxsaWFtLnlpemltYUB0ZWNobmUuY29tLmJyIiwic3ViIjoid2lsbGlhbS55aXppbWFAdGVjaG5lLmNvbS5iciIsImFjY291bnQiOnsidmFsaWQiOnRydWUsImJzcyI6IjQ4NGViYzIxNTczNzQ3ZGFhOGYxNjkyNTI2YTEyNzhlIn0sImlhdCI6MTU2MjE3NjgwMywiZXhwIjoxNTYyMTgwNDAzLCJpc3MiOiJodHRwczovL2lhbS5jbG91ZC5pYm0uY29tL2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiYngiLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.cFzdyfHXJPNxOchHn_edbNK1hrIu8eFFolVNb23D2S5YLo71tJXAAkeFnpSKbURrwAS2ppBnr5hwiU7dT6PJLbdXTCWVBWjELETDEs_CfShJha7SnNuPUBxhBlgz4hFyJenCbUxvRRH45_kegLxcZ3uxqvYwfIaju-PoXdmWZdgZtFV3rmJw64m1gakrgiKKrz9m1IM9GHQD-JcklBHGX-68fqKJayTTmKRDUuq5AEFWucSk_iSNheN75fIhMUKOae52A_0iAiYIgxKypRk2g3k-l8xWTCMS5ENtUeQJkAnde9UYr-CvphUAgIEYLT0WONjSF7m1aavHvRTAQV0lqg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://metering-reporting.ng.bluemix.net/v4/accounts/484ebc21573747daa8f1692526a1278e/resource_instances/usage/2019-06?_limit=100&_names=true",
+					"protocol": "https",
+					"host": [
+						"metering-reporting",
+						"ng",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"v4",
+						"accounts",
+						"484ebc21573747daa8f1692526a1278e",
+						"resource_instances",
+						"usage",
+						"2019-06"
+					],
+					"query": [
+						{
+							"key": "_limit",
+							"value": "100"
+						},
+						{
+							"key": "_names",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

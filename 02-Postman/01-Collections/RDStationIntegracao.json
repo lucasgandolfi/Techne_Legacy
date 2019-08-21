@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "827a178c-3713-45ce-a0a3-099264a68594",
+		"name": "RDSTATION",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Conseguindo o Token de Acesso",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n  \"client_id\": \"29a7bcee-42c8-467d-b7a2-431205b1817b\",\n  \"client_secret\": \"24d52470e9cf4b91a3a532f8c03aa6e4\",\n  \"code\": \"32e0be86ae5952519882d35f87b73a7e\"\n}"
+				},
+				"url": {
+					"raw": "https://api.rd.services/auth/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rd",
+						"services"
+					],
+					"path": [
+						"auth",
+						"token"
+					]
+				},
+				"description": "Teste 01 com o code:\n\n32e0be86ae5952519882d35f87b73a7e\n"
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\n{\n  \"client_id\": \"29a7bcee-42c8-467d-b7a2-431205b1817b\",\n  \"client_secret\": \"24d52470e9cf4b91a3a532f8c03aa6e4\",\n  \"refresh_token\": \"NmqO7RVAIT9oVEELDCzQZciiyCTNdHxys0QR9vOHxTs\"\n}"
+				},
+				"url": {
+					"raw": "https://api.rd.services/auth/token",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rd",
+						"services"
+					],
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Inserção de Lead",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJodHRwczovL2FwaS5yZC5zZXJ2aWNlcyIsInN1YiI6IkhqQUloMnN0N2F4ZE03Rml3X3NlbFRaUzlyU0VjQUxsbnBRN3BRRW5lVnNAY2xpZW50cyIsImF1ZCI6Imh0dHBzOi8vYXBwLnJkc3RhdGlvbi5jb20uYnIvYXBpL3YyLyIsImFwcF9uYW1lIjoiYm90cy1pbnRlZ3JhdGlvbiIsImV4cCI6MTU2MTU2Nzk2MCwiaWF0IjoxNTYxNDgxNTYwLCJzY29wZSI6IiJ9.d2UYZI4lmKOagRLD0xPiB9seVdUSw9asAnJ__9-Av9kew0netz8m7zs8vVt_Wx9qNuFgXdTYRbPWFxJJPVFhY0mGHeJZhm3Q1gueff1Qrw2SzGF4JWNZVCGOFAlzh6q5WIq6j15USpdW1o6_IDq7bCAkHh1kov202yBU07NXvJlaU4XZBZob7YuBa6JC_8qY_jn_qkY2G5m2Vin2QObAu0EHCVpWvZ41V8-ilOPIx-Xflw2WTRXsZHVrIu8fdZZsL0i7aX327XWHGvaMS9KcbYd8fiFGR-mQtpJNtLeArtCisXib15nYQFetxqch3qf2rXObcyT13w9fHeuQf6S-Rw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"event_type\": \"CHAT_STARTED\",\r\n  \"event_family\":\"CDP\",\r\n  \"payload\": {\r\n     \"name\": \">>Testando RDSTATION 02456\",\r\n     \"email\": \"email@email.com\",\r\n     \"company_name\": \"Company name of the contact\",\r\n     \"company_site\": \"Company website of the contact\",\r\n     \"job_title\": \"Job title of the contact\",\r\n     \"personal_phone\": \"Phone of the contact\",\r\n     \"mobile_phone\": \"Mobile phone of the contact\",\r\n     \"twitter\": \"Twitter handler of the contact\",\r\n     \"facebook\": \"Facebook of the contact\",\r\n     \"linkedin\": \"Linkedin of the contact\",\r\n     \"website\": \"Website of the contact\",\r\n     \"chat_subject\": \"Chat subject\",\r\n     \"cf_birthdate\": \"1980-06-10\",\r\n     \"cf_gender\": \"Gender of the Contact\",\r\n     \"cf_chat_status\": \"online\",\r\n     \"cf_chat_type\": \"Type of the chat: sales, support, ...\"\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "https://api.rd.services/platform/events",
+					"protocol": "https",
+					"host": [
+						"api",
+						"rd",
+						"services"
+					],
+					"path": [
+						"platform",
+						"events"
+					]
+				},
+				"description": "Inserção de lead Padrão"
+			},
+			"response": []
+		}
+	]
+}

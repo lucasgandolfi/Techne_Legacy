@@ -1,0 +1,181 @@
+{
+	"info": {
+		"_postman_id": "4e99e7d3-6dca-4ee2-ba77-0e8390f2c6bb",
+		"name": "DASH",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "caminho_bloco_teste",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"ol\":\"sim\"\n\t\n}"
+				},
+				"url": {
+					"raw": "https://app-9-174-59171.ide.cronapp.io/api/cronapi/rest/blockly.BlocoTeste:Executar?empresa=unip&tipo_insc=presencial&ttokn=fiusahfisua",
+					"protocol": "https",
+					"host": [
+						"app-9-174-59171",
+						"ide",
+						"cronapp",
+						"io"
+					],
+					"path": [
+						"api",
+						"cronapi",
+						"rest",
+						"blockly.BlocoTeste:Executar"
+					],
+					"query": [
+						{
+							"key": "empresa",
+							"value": "unip"
+						},
+						{
+							"key": "tipo_insc",
+							"value": "presencial"
+						},
+						{
+							"key": "ttokn",
+							"value": "fiusahfisua"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ddds",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "'application/json'",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://ddd.pricez.com.br/ddds.json",
+					"protocol": "http",
+					"host": [
+						"ddd",
+						"pricez",
+						"com",
+						"br"
+					],
+					"path": [
+						"ddds.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "criaToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app-9-174-18487.ide.cronapp.io/api/cronapi/rest/blockly.EndPoint.Criador_token",
+					"protocol": "https",
+					"host": [
+						"app-9-174-18487",
+						"ide",
+						"cronapp",
+						"io"
+					],
+					"path": [
+						"api",
+						"cronapi",
+						"rest",
+						"blockly.EndPoint.Criador_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apagaToken",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app-9-174-18487.ide.cronapp.io/api/cronapi/rest/blockly.EndPoint.apagar_token_bd?id_empresa=123",
+					"protocol": "https",
+					"host": [
+						"app-9-174-18487",
+						"ide",
+						"cronapp",
+						"io"
+					],
+					"path": [
+						"api",
+						"cronapi",
+						"rest",
+						"blockly.EndPoint.apagar_token_bd"
+					],
+					"query": [
+						{
+							"key": "id_empresa",
+							"value": "123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "contaInscrição",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app-9-174-6571.ide.cronapp.io/api/cronapi/rest/blockly.EndPoint.contagem_inscricao?token_access=1421EFFD801859C75E7364F6FA0020EA&tipo_inscricao=ead&id_empresa=1",
+					"protocol": "https",
+					"host": [
+						"app-9-174-6571",
+						"ide",
+						"cronapp",
+						"io"
+					],
+					"path": [
+						"api",
+						"cronapi",
+						"rest",
+						"blockly.EndPoint.contagem_inscricao"
+					],
+					"query": [
+						{
+							"key": "token_access",
+							"value": "1421EFFD801859C75E7364F6FA0020EA"
+						},
+						{
+							"key": "tipo_inscricao",
+							"value": "ead"
+						},
+						{
+							"key": "id_empresa",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

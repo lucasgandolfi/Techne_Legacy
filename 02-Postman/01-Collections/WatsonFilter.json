@@ -1,0 +1,125 @@
+{
+	"info": {
+		"_postman_id": "7dc38996-c0ad-43c2-bcc4-9e7641d1a63b",
+		"name": "WATSON LOGS FILTER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Log usuários com filtro-data e lead",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "5jTbsjXIjhsu35jVWQYnHbZPJe7HuHygwg84ZdO01-Sm",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apikey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces/b7b23fe1-0e22-436d-b835-1f5f949f9646/logs?cursor=dOfVSuh6fBoqT3CZv8KCCYMgCX5BMJ0X7eQ8T6SK2npqsbz90op3f02dR5QF7ySWxGNuIYdl1ImnQasS+JZRavaL46J7hfltIzRSQPj7Gf7D28+dFL0GrMR8B2/Vg5PeVKihfTgAC/0SqdvJfP2gPURMYD2e/+bRKT0px3WyprB0ejWjHhNIYN9p/1KcQwAv/XUsI6iRLRP8bm0wQkjBnSPp+pnHp1J9yuSX9Fr4v+p9QV9Y0/eXtsUqBOIYfMexbN+fa8xYnvK+PsJWfsaFX9rQ+ABcKdFr9aRN8aNE3kHXcR6MyedXACX6gr+9pWOr9Fj1A5FEHFDFARDr/IeNobZaYN7H7N1+DHXYghVXALtGDwVd/1DWBcy7yfOIEIiTA1ZOlYV2TGhkV0BHHRTFO2EST1uVjuluBXKQudUBHmRbu/wFNE/e/YirFnadbQaq1sycqoNmSsKt/4aXNTF5PSDwKUdMYDQDmjeBarDAleEeKPSIMBw/kVLC7SwKf7v7xXNRRKkJWKub4EjHotda5BjwnhO1rqw/9GctYcW649L1vvSOZi8R32M0XRO2lP6vAYYR1Pz4EOxAxpEI4sjkPLAWXEjK7Ha7G92maM+EMSw9AOj1NWxKb7VKYMH6AuFH828aWm/2JajiMjrTcax9tn9JJQcsb52QkQP6yfuKAwBVZYkGvwCzWPbxVSeYMbkvJyOpQFRZn+1d6S+k9Vjgy6V63wTnoD/LiD9d+X5ar4ivG0UJOlrweSy9xcZqET7l2aItqvc9Z/aK4wAYmKjcxFHMt2QvxLD1cwzMUZo9O/dtQ07X9aoiCWYQd7nNVw9PGJIfAKKNMeoKbXCSwgIcD7DAFU15D5cpHv49tSW8b+nKolcwuKdBfraNfMMkQneXC0XJ9ttwZwWv8QwfipNOJJkqFhOyA45ICuohNbeE78RJChJ6HhEGjcIoPcijGu3Cdv3r+/nUFcVjp0qoBBLrukIp9lZTAzNku5tSGVyPgE7/+OrbX8bAJKoqaT5DjGvG3K9BQhINpdH6qjJsvEUjl9Tz+tGLGm+UWpNV/6gLm1O+2Fu9OM4lVRIihWW5vP7N3ZuWwsbGpeDUcK6hvRg4HxKGxZUJ8KaBUB6MQr7VDMJy7YozsK4SK0kyufD4qAUZC8QJZdPHnx8s8lTuZJ8lBZA4ccij2Vu6YIL18wqwmcIPQRddEYPxniLdiQHU+E/L8IW5YgiJ9gg1GG/irVNFUQEvYFTBCIiTCR2eugs16efVVIxS2Ai14XKbQyn/C+VV+FExBULVQ+ed3O959SbW+bvQQPcoNfrFfVXrTqhMURSkRUOvZIO7dZJTP5etpTFQsWa+1ze3linxWXD3p/vt1YhbczHBhn7H0/CStgtaOBUI8fgMdQU9/RtazZ56zmYTKGLHrB1h4CGEY0/l8pUs4c9u2tiE4EWQkW14kuEvltUlYcTgneR8bqmgmE6dA4sf8oBv2fX7q3/R6wzTs4fTUgvw/DzZNPnG&version=2019-02-28&filter=(response_timestamp>=2019-07-01),(request.input.text::\"blockly.CaptacaoLead.Done\"),(response_timestamp<2019-07-02)&page_limit=10000",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"watsonplatform",
+						"net"
+					],
+					"path": [
+						"assistant",
+						"api",
+						"v1",
+						"workspaces",
+						"b7b23fe1-0e22-436d-b835-1f5f949f9646",
+						"logs"
+					],
+					"query": [
+						{
+							"key": "cursor",
+							"value": "dOfVSuh6fBoqT3CZv8KCCYMgCX5BMJ0X7eQ8T6SK2npqsbz90op3f02dR5QF7ySWxGNuIYdl1ImnQasS+JZRavaL46J7hfltIzRSQPj7Gf7D28+dFL0GrMR8B2/Vg5PeVKihfTgAC/0SqdvJfP2gPURMYD2e/+bRKT0px3WyprB0ejWjHhNIYN9p/1KcQwAv/XUsI6iRLRP8bm0wQkjBnSPp+pnHp1J9yuSX9Fr4v+p9QV9Y0/eXtsUqBOIYfMexbN+fa8xYnvK+PsJWfsaFX9rQ+ABcKdFr9aRN8aNE3kHXcR6MyedXACX6gr+9pWOr9Fj1A5FEHFDFARDr/IeNobZaYN7H7N1+DHXYghVXALtGDwVd/1DWBcy7yfOIEIiTA1ZOlYV2TGhkV0BHHRTFO2EST1uVjuluBXKQudUBHmRbu/wFNE/e/YirFnadbQaq1sycqoNmSsKt/4aXNTF5PSDwKUdMYDQDmjeBarDAleEeKPSIMBw/kVLC7SwKf7v7xXNRRKkJWKub4EjHotda5BjwnhO1rqw/9GctYcW649L1vvSOZi8R32M0XRO2lP6vAYYR1Pz4EOxAxpEI4sjkPLAWXEjK7Ha7G92maM+EMSw9AOj1NWxKb7VKYMH6AuFH828aWm/2JajiMjrTcax9tn9JJQcsb52QkQP6yfuKAwBVZYkGvwCzWPbxVSeYMbkvJyOpQFRZn+1d6S+k9Vjgy6V63wTnoD/LiD9d+X5ar4ivG0UJOlrweSy9xcZqET7l2aItqvc9Z/aK4wAYmKjcxFHMt2QvxLD1cwzMUZo9O/dtQ07X9aoiCWYQd7nNVw9PGJIfAKKNMeoKbXCSwgIcD7DAFU15D5cpHv49tSW8b+nKolcwuKdBfraNfMMkQneXC0XJ9ttwZwWv8QwfipNOJJkqFhOyA45ICuohNbeE78RJChJ6HhEGjcIoPcijGu3Cdv3r+/nUFcVjp0qoBBLrukIp9lZTAzNku5tSGVyPgE7/+OrbX8bAJKoqaT5DjGvG3K9BQhINpdH6qjJsvEUjl9Tz+tGLGm+UWpNV/6gLm1O+2Fu9OM4lVRIihWW5vP7N3ZuWwsbGpeDUcK6hvRg4HxKGxZUJ8KaBUB6MQr7VDMJy7YozsK4SK0kyufD4qAUZC8QJZdPHnx8s8lTuZJ8lBZA4ccij2Vu6YIL18wqwmcIPQRddEYPxniLdiQHU+E/L8IW5YgiJ9gg1GG/irVNFUQEvYFTBCIiTCR2eugs16efVVIxS2Ai14XKbQyn/C+VV+FExBULVQ+ed3O959SbW+bvQQPcoNfrFfVXrTqhMURSkRUOvZIO7dZJTP5etpTFQsWa+1ze3linxWXD3p/vt1YhbczHBhn7H0/CStgtaOBUI8fgMdQU9/RtazZ56zmYTKGLHrB1h4CGEY0/l8pUs4c9u2tiE4EWQkW14kuEvltUlYcTgneR8bqmgmE6dA4sf8oBv2fX7q3/R6wzTs4fTUgvw/DzZNPnG"
+						},
+						{
+							"key": "version",
+							"value": "2019-02-28"
+						},
+						{
+							"key": "filter",
+							"value": "(response_timestamp>=2019-07-01),(request.input.text::\"blockly.CaptacaoLead.Done\"),(response_timestamp<2019-07-02)"
+						},
+						{
+							"key": "page_limit",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LOG TESTE - CRONAP",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "5jTbsjXIjhsu35jVWQYnHbZPJe7HuHygwg84ZdO01-Sm",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "apikey",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gateway.watsonplatform.net/assistant/api/v1/workspaces/b7b23fe1-0e22-436d-b835-1f5f949f9646/logs?cursor=dOfVSuh6fBoqT3CZv8KCCYMgCX5BMJ0X7eQ8T6SK2npqsbz90op3f02dR5QF7ySWxGNuIYdl1ImnQasS+JZRavaL46J7hfltIzRSQPj7Gf7D28+dFL0GrMR8B2/Vg5PeVKihfTgAC/0SqdvJfP2gPURMYD2e/+bRKT0px3WyprB0ejWjHhNIYN9p/1KcQwAv/XUsI6iRLRP8bm0wQkjBnSPp+pnHp1J9yuSX9Fr4v+p9QV9Y0/eXtsUqBOIYfMexbN+fa8xYnvK+PsJWfsaFX9rQ+ABcKdFr9aRN8aNE3kHXcR6MyedXACX6gr+9pWOr9Fj1A5FEHFDFARDr/IeNobZaYN7H7N1+DHXYghVXALtGDwVd/1DWBcy7yfOIEIiTA1ZOlYV2TGhkV0BHHRTFO2EST1uVjuluBXKQudUBHmRbu/wFNE/e/YirFnadbQaq1sycqoNmSsKt/4aXNTF5PSDwKUdMYDQDmjeBarDAleEeKPSIMBw/kVLC7SwKf7v7xXNRRKkJWKub4EjHotda5BjwnhO1rqw/9GctYcW649L1vvSOZi8R32M0XRO2lP6vAYYR1Pz4EOxAxpEI4sjkPLAWXEjK7Ha7G92maM+EMSw9AOj1NWxKb7VKYMH6AuFH828aWm/2JajiMjrTcax9tn9JJQcsb52QkQP6yfuKAwBVZYkGvwCzWPbxVSeYMbkvJyOpQFRZn+1d6S+k9Vjgy6V63wTnoD/LiD9d+X5ar4ivG0UJOlrweSy9xcZqET7l2aItqvc9Z/aK4wAYmKjcxFHMt2QvxLD1cwzMUZo9O/dtQ07X9aoiCWYQd7nNVw9PGJIfAKKNMeoKbXCSwgIcD7DAFU15D5cpHv49tSW8b+nKolcwuKdBfraNfMMkQneXC0XJ9ttwZwWv8QwfipNOJJkqFhOyA45ICuohNbeE78RJChJ6HhEGjcIoPcijGu3Cdv3r+/nUFcVjp0qoBBLrukIp9lZTAzNku5tSGVyPgE7/+OrbX8bAJKoqaT5DjGvG3K9BQhINpdH6qjJsvEUjl9Tz+tGLGm+UWpNV/6gLm1O+2Fu9OM4lVRIihWW5vP7N3ZuWwsbGpeDUcK6hvRg4HxKGxZUJ8KaBUB6MQr7VDMJy7YozsK4SK0kyufD4qAUZC8QJZdPHnx8s8lTuZJ8lBZA4ccij2Vu6YIL18wqwmcIPQRddEYPxniLdiQHU+E/L8IW5YgiJ9gg1GG/irVNFUQEvYFTBCIiTCR2eugs16efVVIxS2Ai14XKbQyn/C+VV+FExBULVQ+ed3O959SbW+bvQQPcoNfrFfVXrTqhMURSkRUOvZIO7dZJTP5etpTFQsWa+1ze3linxWXD3p/vt1YhbczHBhn7H0/CStgtaOBUI8fgMdQU9/RtazZ56zmYTKGLHrB1h4CGEY0/l8pUs4c9u2tiE4EWQkW14kuEvltUlYcTgneR8bqmgmE6dA4sf8oBv2fX7q3/R6wzTs4fTUgvw/DzZNPnG&version=2019-02-28&filter=(response_timestamp>=2019-07-01),(request.input.text::\"blockly.CaptacaoLead.Done\"),(response_timestamp<2019-07-02)&page_limit=10000",
+					"protocol": "https",
+					"host": [
+						"gateway",
+						"watsonplatform",
+						"net"
+					],
+					"path": [
+						"assistant",
+						"api",
+						"v1",
+						"workspaces",
+						"b7b23fe1-0e22-436d-b835-1f5f949f9646",
+						"logs"
+					],
+					"query": [
+						{
+							"key": "cursor",
+							"value": "dOfVSuh6fBoqT3CZv8KCCYMgCX5BMJ0X7eQ8T6SK2npqsbz90op3f02dR5QF7ySWxGNuIYdl1ImnQasS+JZRavaL46J7hfltIzRSQPj7Gf7D28+dFL0GrMR8B2/Vg5PeVKihfTgAC/0SqdvJfP2gPURMYD2e/+bRKT0px3WyprB0ejWjHhNIYN9p/1KcQwAv/XUsI6iRLRP8bm0wQkjBnSPp+pnHp1J9yuSX9Fr4v+p9QV9Y0/eXtsUqBOIYfMexbN+fa8xYnvK+PsJWfsaFX9rQ+ABcKdFr9aRN8aNE3kHXcR6MyedXACX6gr+9pWOr9Fj1A5FEHFDFARDr/IeNobZaYN7H7N1+DHXYghVXALtGDwVd/1DWBcy7yfOIEIiTA1ZOlYV2TGhkV0BHHRTFO2EST1uVjuluBXKQudUBHmRbu/wFNE/e/YirFnadbQaq1sycqoNmSsKt/4aXNTF5PSDwKUdMYDQDmjeBarDAleEeKPSIMBw/kVLC7SwKf7v7xXNRRKkJWKub4EjHotda5BjwnhO1rqw/9GctYcW649L1vvSOZi8R32M0XRO2lP6vAYYR1Pz4EOxAxpEI4sjkPLAWXEjK7Ha7G92maM+EMSw9AOj1NWxKb7VKYMH6AuFH828aWm/2JajiMjrTcax9tn9JJQcsb52QkQP6yfuKAwBVZYkGvwCzWPbxVSeYMbkvJyOpQFRZn+1d6S+k9Vjgy6V63wTnoD/LiD9d+X5ar4ivG0UJOlrweSy9xcZqET7l2aItqvc9Z/aK4wAYmKjcxFHMt2QvxLD1cwzMUZo9O/dtQ07X9aoiCWYQd7nNVw9PGJIfAKKNMeoKbXCSwgIcD7DAFU15D5cpHv49tSW8b+nKolcwuKdBfraNfMMkQneXC0XJ9ttwZwWv8QwfipNOJJkqFhOyA45ICuohNbeE78RJChJ6HhEGjcIoPcijGu3Cdv3r+/nUFcVjp0qoBBLrukIp9lZTAzNku5tSGVyPgE7/+OrbX8bAJKoqaT5DjGvG3K9BQhINpdH6qjJsvEUjl9Tz+tGLGm+UWpNV/6gLm1O+2Fu9OM4lVRIihWW5vP7N3ZuWwsbGpeDUcK6hvRg4HxKGxZUJ8KaBUB6MQr7VDMJy7YozsK4SK0kyufD4qAUZC8QJZdPHnx8s8lTuZJ8lBZA4ccij2Vu6YIL18wqwmcIPQRddEYPxniLdiQHU+E/L8IW5YgiJ9gg1GG/irVNFUQEvYFTBCIiTCR2eugs16efVVIxS2Ai14XKbQyn/C+VV+FExBULVQ+ed3O959SbW+bvQQPcoNfrFfVXrTqhMURSkRUOvZIO7dZJTP5etpTFQsWa+1ze3linxWXD3p/vt1YhbczHBhn7H0/CStgtaOBUI8fgMdQU9/RtazZ56zmYTKGLHrB1h4CGEY0/l8pUs4c9u2tiE4EWQkW14kuEvltUlYcTgneR8bqmgmE6dA4sf8oBv2fX7q3/R6wzTs4fTUgvw/DzZNPnG"
+						},
+						{
+							"key": "version",
+							"value": "2019-02-28"
+						},
+						{
+							"key": "filter",
+							"value": "(response_timestamp>=2019-07-01),(request.input.text::\"blockly.CaptacaoLead.Done\"),(response_timestamp<2019-07-02)"
+						},
+						{
+							"key": "page_limit",
+							"value": "10000"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

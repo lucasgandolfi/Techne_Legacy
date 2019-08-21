@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "2909fb67-376b-431c-96fa-bf33e7e75e5c",
+		"name": "watson API REQUEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "01 - pegando o token do watson",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Bearer",
+						"value": "yMpmBnkxTRKBUwFCaSYlgYEg5lAuCNhTInBLn-5sw56t",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://iam.bluemix.net/identity/token?grant_type=urn:ibm:params:oauth:grant-type:apikey&apikey=xQ8AoZ5YWGWUYBAFTFGg0GQOOeExr8oqbQCns8YJmeat",
+					"protocol": "https",
+					"host": [
+						"iam",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"identity",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "urn:ibm:params:oauth:grant-type:apikey"
+						},
+						{
+							"key": "apikey",
+							"value": "xQ8AoZ5YWGWUYBAFTFGg0GQOOeExr8oqbQCns8YJmeat"
+						},
+						{
+							"key": "refresh_token",
+							"value": "ReXzW19jE7yH1kvLFr2IWvM4CeJJQ8KzX8zMtCRo7THWjqW5kU2HZJw5wyZjrSi47D8gbJgOxlbh_cg-GeWZfDvl4C1HOQINYLr9T-zEpG0H8ER6Iwpn_-TIu1Nj0EWasMEPY1UnDBWa7W9p34i-zYifmqVdc4dteSjfNvenEX2mTISNi6MCEVnLBGi1zp62pfD0RSpdE0AjL9Ggfr5dvj23BPHBZ-GZzyY45anj7FKxPwNZObDoLqdFIgl0C3s8scwNscCbmJWxxlkQ8_TVbS-RjfIvb-E3EIGM7I3JRaxyNb6dezCoHXbaqkfMFJcSB20dQOuWhmD_mmz-SzdktyuQZ16fGhCOnhqskIXccDnPNLWy81iuIhS2RPC7JkgpXkd-UBAJJNXAGFd3spW538-3hyVUIi9ipadoXe5jGfob1VjnH4Iz5jU4HJallxdTAJziDlkl7vRjOcB79Bks6vqlZKXf_fY8oef09WQayfdEgCsRusZgC6GJty0ZQKGcc9FF0HS1gSd4609Mt8vCxjxFHmLxbwenrHkh08muqo_4Ae0kJ6jO61jKWJ7qarmMbXgEv8bqj37qxWAftMukuAgt4Cg2ikniLR1aYuaFwBAm1zFnRDpQhtzqiaE86XAIPXPakGu7uns_cLRh_41NiQ5-pbqN1-kPRS91MaVZS-12GCmfwF-oXRKXXcEELgIwq5PAth6M6UYPY90AsQfZVMuFXlXrFizImuBadZYZ72Jo6HavEic_J0P0pjZdAcqWdIpDpHIo0Uw6DLrwjEHQk5CVjZV8hQaM2nEVBzl1aUwkldYHWB00fSWW7QUhB2HzK_fhaBPKe5o_nTSPRK_-T4c2f7Ev7ES2N3WN9UXxh_YINCIdt-3wiedNLFhX-dYAxFWA6YIuxF6ZAPIxqT6mLT0hpIWAPNwuxPu1QE4Ktzl-s5LxPfLhH_tEJG0NcZWJ5XhXw7vReyV1J-ZvYMafHPdomqHQUx3zod9dz06lB8o1z00w_HRZcNWoeTqB0G5epSgO6VKlD34pJGKnuMCNAbiB",
+							"disabled": true
+						},
+						{
+							"key": "account_id",
+							"value": "484ebc21573747daa8f1692526a1278e",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "02 - Validando o Token e acessando",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIyMDE5MDIwNCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJJQk1pZC01MEtOMEJZNFRUIiwiaWQiOiJJQk1pZC01MEtOMEJZNFRUIiwicmVhbG1pZCI6IklCTWlkIiwiaWRlbnRpZmllciI6IjUwS04wQlk0VFQiLCJnaXZlbl9uYW1lIjoiTWF1cmljaW8iLCJmYW1pbHlfbmFtZSI6Ik1lbG8iLCJuYW1lIjoiTWF1cmljaW8gTWVsbyIsImVtYWlsIjoiaW5mcmFAY3JvbmFwcC5pbyIsInN1YiI6ImluZnJhQGNyb25hcHAuaW8iLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiJkZjVjOGYxMjVlMjNkM2Y3MTczYjQ5OTRlZjBhMWU3YiIsImltc191c2VyX2lkIjoiNzE3MDA3NyIsImltcyI6IjE2Nzg2NjMifSwiaWF0IjoxNTYyMjA5NjA0LCJleHAiOjE1NjIyMTMyMDQsImlzcyI6Imh0dHBzOi8vaWFtLmJsdWVtaXgubmV0L2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InVybjppYm06cGFyYW1zOm9hdXRoOmdyYW50LXR5cGU6YXBpa2V5Iiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiZGVmYXVsdCIsImFjciI6MSwiYW1yIjpbInB3ZCJdfQ.cUCxOL1XJwXLNS7irXj99TioihosUeOpQ4ceJGn0A26LOUFlwV9LfLFxzgwx1QGHCulf_pdhh6xqY2nkHBwiLVHdToCuzrbcs4q7D1cCNvyjnKRAr2KfCSn3EpqN5BKZ5d9cfAv8EVz-RLYFl40y6loZxdCpF3gRA6eaopsBz1PyZYc8RXddzOCSkZp8tV8SxNDN68QoZFRs7_HlSyuWtu-BF_AH7gP2N6z4Au-ZYCdtWzOy-lW2iYXvKvqVHtrLMxShK30ni6VSI0JH8MspQoLPVTicR8GtHrI3S9pv9G7sofTkiws7yT4UGXaxW0bFeiN7JwpQUsQ67YdXy4u0jQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://iam.bluemix.net/v1/apikeys?account_id=df5c8f125e23d3f7173b4994ef0a1e7b",
+					"protocol": "https",
+					"host": [
+						"iam",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"v1",
+						"apikeys"
+					],
+					"query": [
+						{
+							"key": "account_id",
+							"value": "df5c8f125e23d3f7173b4994ef0a1e7b"
+						},
+						{
+							"key": "iam_id",
+							"value": "a4452d95-f4f1-4223-9b9f-0f5f7058e273",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "03 - Pegando os Calls",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiIyMDE5MDIwNCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJJQk1pZC01MEtOMEJZNFRUIiwiaWQiOiJJQk1pZC01MEtOMEJZNFRUIiwicmVhbG1pZCI6IklCTWlkIiwiaWRlbnRpZmllciI6IjUwS04wQlk0VFQiLCJnaXZlbl9uYW1lIjoiTWF1cmljaW8iLCJmYW1pbHlfbmFtZSI6Ik1lbG8iLCJuYW1lIjoiTWF1cmljaW8gTWVsbyIsImVtYWlsIjoiaW5mcmFAY3JvbmFwcC5pbyIsInN1YiI6ImluZnJhQGNyb25hcHAuaW8iLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiJkZjVjOGYxMjVlMjNkM2Y3MTczYjQ5OTRlZjBhMWU3YiIsImltc191c2VyX2lkIjoiNzE3MDA3NyIsImltcyI6IjE2Nzg2NjMifSwiaWF0IjoxNTYyMjA5NjA0LCJleHAiOjE1NjIyMTMyMDQsImlzcyI6Imh0dHBzOi8vaWFtLmJsdWVtaXgubmV0L2lkZW50aXR5IiwiZ3JhbnRfdHlwZSI6InVybjppYm06cGFyYW1zOm9hdXRoOmdyYW50LXR5cGU6YXBpa2V5Iiwic2NvcGUiOiJpYm0gb3BlbmlkIiwiY2xpZW50X2lkIjoiZGVmYXVsdCIsImFjciI6MSwiYW1yIjpbInB3ZCJdfQ.cUCxOL1XJwXLNS7irXj99TioihosUeOpQ4ceJGn0A26LOUFlwV9LfLFxzgwx1QGHCulf_pdhh6xqY2nkHBwiLVHdToCuzrbcs4q7D1cCNvyjnKRAr2KfCSn3EpqN5BKZ5d9cfAv8EVz-RLYFl40y6loZxdCpF3gRA6eaopsBz1PyZYc8RXddzOCSkZp8tV8SxNDN68QoZFRs7_HlSyuWtu-BF_AH7gP2N6z4Au-ZYCdtWzOy-lW2iYXvKvqVHtrLMxShK30ni6VSI0JH8MspQoLPVTicR8GtHrI3S9pv9G7sofTkiws7yT4UGXaxW0bFeiN7JwpQUsQ67YdXy4u0jQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://metering-reporting.ng.bluemix.net/v4/accounts/df5c8f125e23d3f7173b4994ef0a1e7b/resource_instances/usage/2019-06?_limit=100&_names=true",
+					"protocol": "https",
+					"host": [
+						"metering-reporting",
+						"ng",
+						"bluemix",
+						"net"
+					],
+					"path": [
+						"v4",
+						"accounts",
+						"df5c8f125e23d3f7173b4994ef0a1e7b",
+						"resource_instances",
+						"usage",
+						"2019-06"
+					],
+					"query": [
+						{
+							"key": "_limit",
+							"value": "100"
+						},
+						{
+							"key": "_names",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
