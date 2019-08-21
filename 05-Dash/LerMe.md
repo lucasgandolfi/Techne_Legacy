@@ -34,4 +34,4 @@
 
 ### todas as outras funcionalidades foram abstrações da  API do watson
 
-![Api Watson Link](https://cloud.ibm.com/apidocs/assistant)
+[Api Watson Link](https://cloud.ibm.com/apidocs/assistant)
